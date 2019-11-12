@@ -35,13 +35,13 @@ public class InquiryServiceImpl implements InquiryService{
 	@Override
 	public List<Inquiry> getAll() {
 		
-//		List<Inquiry> list = null;
-//		list = dao.getAll();
-//		if(list.isEmpty()) {
-//			throw new EmptyListException("No inquiry");
-//		}
-//		return list;
-		return dao.getAll();
+		List<Inquiry> list = null;
+		list = dao.getAll();
+		if(list.isEmpty()) {
+			throw new InquiryNotFoundException("No inquiry");
+		}
+		return list;
+//		return dao.getAll();
 	}
 
 }
